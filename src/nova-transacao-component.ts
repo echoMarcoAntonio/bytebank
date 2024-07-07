@@ -1,11 +1,3 @@
-let saldo = 3500;
-
-const elementoSaldo = document.querySelector(".saldo-valor .valor");
-if (elementoSaldo != null) {
-    elementoSaldo.textContent = saldo.toString();
-}
-
-
 const elementoFormulario = document.querySelector(".block-nova-transacao form") as HTMLFormElement;
 elementoFormulario.addEventListener("submit", function (event) {
     event.preventDefault(); // previne comportamento padrão: recarregar a página.
@@ -35,7 +27,12 @@ elementoFormulario.addEventListener("submit", function (event) {
         elementoSaldo.textContent = saldo.toString();
     }
 
-    const novaTransacao = {
+    type Transacao = {
+        tipoTransacao: string;
+        valor: number;
+        data: Date;
+    }
+    const novaTransacao: Transacao = {
         tipoTransacao: tipoTransacao,
         valor: valor,
         data: data
