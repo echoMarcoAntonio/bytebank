@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+      "target": "ES2023",
+      "outDir": "./dist/js/",
+      "noEmitOnError": true,
+      "moduleResolution": "node",
+      "baseUrl": "./",
+      "paths": {
+        "undici-types": ["node_modules/undici-types"],
+        "csstype": ["node_modules/csstype"]
+      }
+    },
+    "include": [
+      "src/**/*"
+    ]
+  }
+  
